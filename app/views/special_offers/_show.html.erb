@@ -1,12 +1,12 @@
 <% if Spree::SpecialOffers::Config[:enabled] && !Product.special_offers.empty? %>
   <div class="spec_vertical">
-    <div class="spec_header"><%= Spree::SpecialOffers::Config[:block_name] %></div>
+    <h2 class="filter-box-caption"><%= Spree::SpecialOffers::Config[:block_name] %></div>
     <div class="spec_body">
       <% Product.special_offers.each do |product| %>
         <div class="spec_item">
           <% image ||= product.images.first
           if image %>
-            <%= link_to image_tag(image.attachment.url(:preview), :alt => image.alt.present? ? image.alt : product.name), product, :class => "spec_item_img" %>
+            <%= link_to image_tag(image.attachment.url(:small), :alt => image.alt.present? ? image.alt : product.name), product, :class => "spec_item_img" %>
           <% end %>
           <%= link_to product.name, product, :class => "spec_item_title" %>
           <div class="rating-stars-container">
