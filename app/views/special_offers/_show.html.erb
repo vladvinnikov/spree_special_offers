@@ -1,6 +1,6 @@
 <% if Spree::SpecialOffers::Config[:enabled] && !Product.special_offers.empty? %>
   <div class="spec_vertical">
-    <h2 class="filter-box-caption"><%= Spree::SpecialOffers::Config[:block_name] %></div>
+    <h2 class="filter-box-caption"><%= Spree::SpecialOffers::Config[:block_name] %></h2>
     <div class="spec_body">
       <% Product.special_offers.each do |product| %>
         <div class="spec_item">
