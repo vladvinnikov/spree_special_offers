@@ -9,5 +9,5 @@ class SpreeSpecialOffersHooks < Spree::ThemeSupport::HookListener
     %(<li<%== ' class="active"' if controller.controller_name == 'special_offers' %>><%= link_to t("special_offers"), admin_special_offers_path %></li>)
   end
   
-  insert_after :sidebar, "special_offers/show"
+  insert_after :special_offers, "special_offers/show"
 end
