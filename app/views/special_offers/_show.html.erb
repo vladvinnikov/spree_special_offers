@@ -7,7 +7,7 @@
           <% image ||= product.images.first
           if image %>
             <%= link_to image_tag(image.attachment.url(:small), :alt => image.alt.present? ? image.alt : product.name), product, :class => "spec_item_img" %>
-            <%= image_tag('special_offer_label.png', :alt => 'SP', :class => 'novelty') %>
+            <%= image_tag('special_offer_label.png', :alt => 'SP', :class => 'novelty', :title => Spree::SpecialOffers::Config[:block_name]) %>
           <% end %>
           <%= link_to product.name, product, :class => "spec_item_title" %>
           <div class="rating-stars-container">
