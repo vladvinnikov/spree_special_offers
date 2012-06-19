@@ -10,10 +10,6 @@
             <%= image_tag('special_offer_label.png', :alt => 'SP', :class => 'novelty', :title => Spree::SpecialOffers::Config[:block_name]) %>
           <% end %>
           <%= link_to product.name, product, :class => "spec_item_title" %>
-          <div class="rating-stars-container">
-            <% stars = product.get_stars %>
-            <%= render :partial => "reviews/stars", :locals => {:stars => stars[0]} %>
-          </div>
           <div class="spec_item_price"><%= product_price(product) %></div>
         </div>
       <% end %>
